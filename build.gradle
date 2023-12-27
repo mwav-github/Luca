@@ -7,10 +7,7 @@ plugins {
 
 group = 'com.mwav'
 version = '0.0.1-SNAPSHOT'
-
-java {
-    sourceCompatibility = '21'
-}
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
@@ -19,6 +16,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -29,3 +27,6 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+bootWar.enabled = false
+war.enabled = true
