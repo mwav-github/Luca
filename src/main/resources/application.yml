@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    check-template-location: true
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+logging:
+  charset:
+    console: utf-8
+  level:
+    root: info
+    "[com.mwav.luca]": info

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout/default}" layout:fragment="content">
+
+<div>
+    <h1>Content 영역입니다.</h1>
+</div>
+
+<!-- inline CSS 영역-->
+<style th:inline="css" type="text/css">
+    body {
+        margin: 30px;
+        border: 1px solid red;
+    }
+</style>
+
+<!-- inline JS 영역-->
+<script th:inline="javascript" type="text/javascript">
+    alert("페이지가 시작됩니다.");
+</script>
+
+</html>
